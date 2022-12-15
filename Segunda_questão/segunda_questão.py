@@ -19,21 +19,16 @@ while True:
         primeiro = 0
         segundo = 1
         retorno = int(valor["input"])
-        quantidade_de_calculos = 0
         gatilho = False
         exame = False
-        while quantidade_de_calculos < 50 and gatilho == False:
-            quantidade_de_calculos = quantidade_de_calculos + 1
+        while retorno > conta:
             conta = segundo + primeiro
             primeiro = segundo
             segundo = conta
-            if quantidade_de_calculos <= 49 and retorno == conta:
+            if retorno == conta:
                 janela["Texto"].update("Faz parte da lista de Fibonacci")
                 gatilho = True
                 exame = True
-            if quantidade_de_calculos == 49:
-                gatilho = True
         if exame == False:
             janela["Texto"].update("Não faz parte da lista de Fibonacci")
-                        
-                
+        print(conta)
